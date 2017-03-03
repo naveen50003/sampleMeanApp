@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html ng-app="samApp">
+
+<head>
+    <style type="text/css">
+    .person-class {
+        cursor: pointer;
+        font-size: 18px;
+    }
+    </style>
+</head>
+
+<body ng-controller="parentctrl">
+    <h1> Application Running on Server </h1>
+    <div>
+        <p ng-repeat="person in persons" class="person-class" ng-click="getDetails(person.name)">
+            {{person.name}}
+        </p>
+    </div>
+    <div ng-if="personInfo">
+        {{personInfo}}
+    </div>
+</body>
+<script type="text/javascript" src="/vendor/lib/js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="/vendor/lib/js/angular.js"></script>
+<script type="text/javascript" src="/mainModule.module.js"></script>
+<script type="text/javascript" src="/controller/parentCtrl.controller.js"></script>
+<script type="text/javascript" src="/services/sampleService.service.js"></script>
+
+</html>
